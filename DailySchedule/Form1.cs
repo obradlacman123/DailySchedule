@@ -12,6 +12,9 @@ namespace DailySchedule
 {
     public partial class Form1 : Form
     {
+        clsManageSqliteDB clsSQLite = new clsManageSqliteDB();
+        DataGridView[] dtgFlights = new DataGridView[4];
+
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +22,42 @@ namespace DailySchedule
 
         private void button1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dtgFlights[0] = dataGridView1;
+            dtgFlights[1] = dataGridView2;
+            dtgFlights[2] = dataGridView3;
+            dtgFlights[3] = dataGridView4;
+            for (int i = 0; i < 4; i++)
+            {
+                string query = "SELECT * FROM schedules WHERE shift = " + i.ToString();
+                DataTable dTable = clsSQLite.GetDataTable(query);
+                dtgFlights[i].DataSource = dTable;
+            }
+        }
+
+        private void btnManageTables_Click(object sender, EventArgs e)
+        {
             formManageTables formMT = new formManageTables();
             formMT.Show();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddFlight_Click(object sender, EventArgs e)
+        {
+            formFlightItem formItem = new formFlightItem();
+            formItem.Show();
         }
     }
 }

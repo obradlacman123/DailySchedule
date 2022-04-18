@@ -22,8 +22,7 @@ namespace DailySchedule
                 Columns = z;
             }
         };
-        TableName[] oTableNames;
-        int iTableNamesLength;
+        List<TableName> oTableNames;
         clsManageSqliteDB clsSQLite = new clsManageSqliteDB();
         public formManageTables()
         {
@@ -73,13 +72,14 @@ namespace DailySchedule
         
         private void InitializeSelecteTableCombobox()
         {
-            iTableNamesLength = 2;
-            oTableNames = new TableName[105];
-            oTableNames[0] = new TableName("Lessons", "lessons", new string[]{ "name", "duration", "periods" });
-            oTableNames[1] = new TableName("Formation", "formation", new string[] { "content" });
+            oTableNames = new List<TableName>();
+            oTableNames.Add(new TableName("Lessons", "lessons", new string[] { "name", "duration", "periods" }));
+            oTableNames.Add(new TableName("Formation", "formation", new string[] { "content" }));
+            oTableNames.Add(new TableName("IP", "ip", new string[] { "ip_group", "ip_name" }));
+            oTableNames.Add(new TableName("SP", "sp", new string[] { "sp_group", "sp_name" }));
 
             cmbTableNames.Items.Clear();
-            for (int i = 0; i < iTableNamesLength; i++)
+            for (int i = 0; i < oTableNames.Count; i++)
             {
                 cmbTableNames.Items.Add(oTableNames[i].InShow);
             }
