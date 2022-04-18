@@ -73,10 +73,15 @@ namespace DailySchedule
         private void InitializeSelecteTableCombobox()
         {
             oTableNames = new List<TableName>();
+            oTableNames.Add(new TableName("Formation", "formation", new string[] { "name", "chop", "tacan" }));
+            oTableNames.Add(new TableName("IP", "ip", new string[] { "col_group", "name" }));
+            oTableNames.Add(new TableName("SP", "sp", new string[] { "col_group", "name" }));
+            oTableNames.Add(new TableName("MIX", "mix", new string[] { "name" }));
+            oTableNames.Add(new TableName("ROUTE", "route", new string[] { "name" }));
+            oTableNames.Add(new TableName("FREQ", "freq", new string[] { "content" }));
+            oTableNames.Add(new TableName("SCL", "scl", new string[] { "content" }));
+            oTableNames.Add(new TableName("RMM", "rmm", new string[] { "name" }));
             oTableNames.Add(new TableName("Lessons", "lessons", new string[] { "name", "duration", "periods" }));
-            oTableNames.Add(new TableName("Formation", "formation", new string[] { "content" }));
-            oTableNames.Add(new TableName("IP", "ip", new string[] { "ip_group", "ip_name" }));
-            oTableNames.Add(new TableName("SP", "sp", new string[] { "sp_group", "sp_name" }));
 
             cmbTableNames.Items.Clear();
             for (int i = 0; i < oTableNames.Count; i++)

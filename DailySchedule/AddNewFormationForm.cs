@@ -45,6 +45,8 @@ namespace DailySchedule
                 query = query + ") VALUES ("
                 + query_value + "' )";
 
+                //MessageBox.Show(query);
+
                 int result = clsSQLite.ExecuteQuery(query);
                 MessageBox.Show(result + " item(s) successfully added");
                 this.DialogResult = DialogResult.OK;

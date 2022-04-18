@@ -36,10 +36,10 @@ namespace DailySchedule
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDeleteFlight = new System.Windows.Forms.Button();
             this.btnEditFlight = new System.Windows.Forms.Button();
             this.btnAddFlight = new System.Windows.Forms.Button();
             this.btnManageTables = new System.Windows.Forms.Button();
-            this.btnDeleteFlight = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -162,6 +162,17 @@ namespace DailySchedule
             this.tableLayoutPanel3.Size = new System.Drawing.Size(923, 64);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
+            // btnDeleteFlight
+            // 
+            this.btnDeleteFlight.AutoSize = true;
+            this.btnDeleteFlight.Location = new System.Drawing.Point(388, 10);
+            this.btnDeleteFlight.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.btnDeleteFlight.Name = "btnDeleteFlight";
+            this.btnDeleteFlight.Size = new System.Drawing.Size(144, 44);
+            this.btnDeleteFlight.TabIndex = 4;
+            this.btnDeleteFlight.Text = "Delete Flight";
+            this.btnDeleteFlight.UseVisualStyleBackColor = true;
+            // 
             // btnEditFlight
             // 
             this.btnEditFlight.AutoSize = true;
@@ -196,17 +207,7 @@ namespace DailySchedule
             this.btnManageTables.TabIndex = 1;
             this.btnManageTables.Text = "Manage Tables";
             this.btnManageTables.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteFlight
-            // 
-            this.btnDeleteFlight.AutoSize = true;
-            this.btnDeleteFlight.Location = new System.Drawing.Point(388, 10);
-            this.btnDeleteFlight.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.btnDeleteFlight.Name = "btnDeleteFlight";
-            this.btnDeleteFlight.Size = new System.Drawing.Size(144, 44);
-            this.btnDeleteFlight.TabIndex = 4;
-            this.btnDeleteFlight.Text = "Delete Flight";
-            this.btnDeleteFlight.UseVisualStyleBackColor = true;
+            this.btnManageTables.Click += new System.EventHandler(this.btnManageTables_Click_1);
             // 
             // Form1
             // 

@@ -40,8 +40,6 @@ namespace DailySchedule
 
         private void btnManageTables_Click(object sender, EventArgs e)
         {
-            formManageTables formMT = new formManageTables();
-            formMT.Show();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +56,12 @@ namespace DailySchedule
         {
             formFlightItem formItem = new formFlightItem();
             formItem.Show();
+        }
+
+        private void btnManageTables_Click_1(object sender, EventArgs e)
+        {
+            formManageTables formMT = new formManageTables();
+            formMT.Show();
         }
     }
 }
